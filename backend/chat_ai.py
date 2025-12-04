@@ -24,12 +24,11 @@ class QuestionResponse(BaseModel):
 # ✅ CORS Setup
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # for dev, allow all; later restrict to your frontend URL
+    allow_origins=["*"],  # for dev, allow all
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 router = APIRouter(tags=["Chat AI"])
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
