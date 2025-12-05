@@ -7,7 +7,7 @@ import Header from "../components/Header";
    ----------------------- */
 
 const apiService = {
-  BASE_URL: "http://localhost:8003",
+   BASE_URL: import.meta.env.VITE_API_URL_CHATAI || "http://localhost:8003",
   
   async quickPredict(symptoms: string) {
     const url = `${this.BASE_URL}/disease/predict-quick`;

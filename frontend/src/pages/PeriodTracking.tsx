@@ -26,7 +26,7 @@ type ChatResponse = {
   reply: string;
 };
 
-const backendBase = import.meta.env?.VITE_BACKEND_URL || "http://0.0.0.0:8001";
+const backendBase = import.meta.env?.VITE_API_URL_COMBINE || "http://0.0.0.0:8001";
 
 
 const PeriodTracking = () => {

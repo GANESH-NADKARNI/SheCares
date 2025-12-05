@@ -9,7 +9,7 @@ import { getUserLocation } from "../../utils/getUserLocation";
    Change BASE_URL if your chat API runs elsewhere.
    ----------------------- */
 const apiService = {
-  BASE_URL: import.meta.env.VITE_CHAT_API_URL || "http://localhost:8003",
+  BASE_URL: import.meta.env.VITE_API_URL_CHATAI || "http://localhost:8003",
   async chatWithText(message: string) {
     const url = `${this.BASE_URL}/chat/text`;
     const fd = new FormData();

@@ -37,7 +37,7 @@ const fadeIn = {
   animate: { opacity: 1, y: 0 }, 
   transition: { duration: 0.45 } 
 };
-
+const BACKEND_URL = import.meta.env.VITE_FOOD_ANALYSIS_URL || "http://localhost:8002";
 const PregnancyCare = () => {
   const [user] = useAuthState(auth);
   const navigate = useNavigate();
@@ -86,7 +86,7 @@ const PregnancyCare = () => {
   const fetchAffirmation = async () => {
     setAffirmationLoading(true);
     try {
-      const response = await fetch("http://localhost:8002/pregnancy/affirmation", {
+      const response = await fetch(`${BACKEND_URL}/pregnancy/affirmation`, {
         method: "POST",
       });
       if (!response.ok) throw new Error("Failed to fetch affirmation");
@@ -122,7 +122,7 @@ const PregnancyCare = () => {
       const formData = new FormData();
       formData.append("message", userMessage);
 
-      const response = await fetch("http://localhost:8002/pregnancy/chat", {
+      const response = await fetch(`${BACKEND_URL}/pregnancy/chat`, {
         method: "POST",
         body: formData,
       });
@@ -157,7 +157,7 @@ const PregnancyCare = () => {
       const formData = new FormData();
       formData.append("topic", selectedTopic);
 
-      const response = await fetch("http://localhost:8002/pregnancy/tips", {
+      const response = await fetch(`${BACKEND_URL}pregnancy/tips`, {
         method: "POST",
         body: formData,
       });
