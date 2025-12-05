@@ -38,7 +38,7 @@ const initialBlankAnalysis: Analysis = {
 
 // Works for both Vite and CRA
 const API_URL = import.meta.env.VITE_FOOD_ANALYSIS_URL || "http://localhost:8002/analyse";
-const BACKEND_FOOD_URL = import.meta.env.VITE_FOOD_ANALYSIS_URL || "http://localhost:8002/analyse";
+const BACKEND_FOOD_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:8002/analyse";
 
 export default function FoodAnalyser() {
   // dynamic state: null means blank UI (no analysis yet)

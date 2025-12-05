@@ -1,0 +1,49 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment files
+.env
+env/
+
+# Node modules (if any in backend or frontend)
+node_modules/
+
+# Local OS files
+.DS_Store
+
+# VSCode settings
+.vscode/
+
+# Datasets (CSV files)
+*.csv
+
+# Model files
+*.pkl
+*.h5
+*.joblib
+
+# Images generated locally
+*.png
+*.jpg
+*.jpeg
+
+# Logs
+*.log
+
+# Build / dist files
+dist/
+build/
+
+# PyPI / virtual environment stuff
+venv/
+.venv/
+
+# Frontend build output
+frontend/node_modules/
+frontend/.next/
+frontend/dist/
+frontend/build/
+
+# Ignore Render config backups
+render.yaml
