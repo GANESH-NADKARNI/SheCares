@@ -62,7 +62,7 @@ app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
 
 // Database Connection
-const dbURI = process.env.DB_URL
+const dbURI = "mongodb+srv://ganeshnadkarni369:TGPHJJM3PEXMl15i@cluster0.3c6h4.mongodb.net/?appName=Cluster0"
 
 mongoose.connect(dbURI)
   .then(() => console.log(`✅ Connected to MongoDB, connection url: ${dbURI}`))
