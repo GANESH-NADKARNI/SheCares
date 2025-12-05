@@ -44,9 +44,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const admin = require('firebase-admin');
-const dosageLogRoutes = require("../frontend/routes/dosageLogRoutes.cjs")
-const medicineRoutes = require('../frontend/routes/medicineRoutes.cjs');
-const incidentRoutes = require('../frontend/routes/incidentRoutes.cjs');
+const dosageLogRoutes = require("./routes/dosageLogRoutes.cjs")
+const medicineRoutes = require('./routes/medicineRoutes.cjs');
+const incidentRoutes = require('./routes/incidentRoutes.cjs');
 const serviceAccount = require('../frontend/davangere-a4f63-firebase-adminsdk-fbsvc-471080c973.json');
 
 admin.initializeApp({
